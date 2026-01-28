@@ -38,7 +38,7 @@ This means we have **16 IP addresses** in this address space.
 
 Although some addresses are reserved by AWS, the 16 IP addresses in the `10.0.1.0/28` range look like this:
 
-#### Private Subnet
+#### 16 Addresses in Range
 
 | IP Address | IP Address | IP Address | IP Address |
 |------------|------------|------------|------------|
@@ -49,9 +49,9 @@ Although some addresses are reserved by AWS, the 16 IP addresses in the `10.0.1.
 
 ## Common CIDR Blocks
 
-Here are some common CIDR blocks and their IP address counts:
+Here are some common CIDR blocks and their total IP address counts:
 
-| CIDR Block | Available IPs | Calculation |
+| CIDR Block | Total IPs | Calculation |
 |------------|---------------|-------------|
 | /32        | 1             | 2^(32-32) = 2^0 = 1 |
 | /28        | 16            | 2^(32-28) = 2^4 = 16 |
@@ -61,14 +61,16 @@ Here are some common CIDR blocks and their IP address counts:
 
 ## AWS Reserved IP Addresses
 
-Important to note: AWS reserves some IP addresses in each subnet:
-- First IP: Network address
-- Second IP: VPC router
-- Third IP: DNS server
-- Fourth IP: Reserved for future use
-- Last IP: Broadcast address
+Important to note: AWS reserves 5 IP addresses in each subnet CIDR block:
+- **First IP**: Network address
+- **Second IP**: VPC router
+- **Third IP**: DNS server
+- **Fourth IP**: Reserved for future use
+- **Last IP**: Broadcast address
 
-So for a /28 CIDR block with 16 total IPs, only 11 are usable for EC2 instances and other resources.
+So for a /28 CIDR block with 16 total IPs, only **11 are usable** for EC2 instances and other resources.
+
+> **Note**: The "Total IPs" column in the table above shows the total number of IP addresses in each CIDR block. When used as an AWS subnet, subtract 5 from this number to get the usable IP addresses.
 
 ## Resources
 
