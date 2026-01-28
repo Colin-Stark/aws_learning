@@ -1,3 +1,5 @@
+![CIDR NOTATION](https://github.com/Colin-Stark/aws_learning/blob/main/cidr.png)
+
 # AWS Learning - CIDR Notation
 
 This repository contains learning materials about AWS networking concepts, specifically focusing on CIDR (Classless Inter-Domain Routing) notation.
